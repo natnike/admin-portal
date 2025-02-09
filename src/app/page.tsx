@@ -2,9 +2,9 @@
 
 export default function Home() {
   console.log(process.env.API_KEY);
-  const apikey = process.env.API_KEY
-  const browser = process.env.NEXT_PUBLIC_BROWSER_VARIABLE
-  const runtime = process.env.RUNTIME_VARIABLE
+  // const apikey = process.env.API_KEY
+  // const browser = process.env.NEXT_PUBLIC_BROWSER_VARIABLE
+  // const runtime = process.env.RUNTIME_VARIABLE
   //const name2 = env('API_KEY');
   return (
     <main className='container'>
