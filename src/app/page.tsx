@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className='container'>
       <h1>Home1</h1>
-      <h1>{name}</h1>
+      <h1>{name} DD</h1>
     </main>
   );
 }
