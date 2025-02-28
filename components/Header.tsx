@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { Apple, Smile } from "lucide-react";
+import { Smile } from "lucide-react";
 import MainNav from "./MainNav";
-import MobileNav from "./MobileNav";
 import { SidebarTrigger } from "./ui/sidebar";
 
 export default function Header() {

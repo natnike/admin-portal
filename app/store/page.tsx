@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useMemo } from "react";
+import { useMemo } from "react";
 import { StoreSchema } from "../schemas/StoreSchema";
 import { getColumns } from "./Columns";
 import DataTable from "./DataTable";
@@ -152,25 +152,7 @@ export default function Store() {
     },
   ];
 
-  const handleEdit = useCallback((store: StoreSchema) => {
-    console.log("Editing store:", store);
-    // Add your edit logic here
-    alert(`EDIT ${store.id}`);
-  }, []);
-
-  const handleDelete = useCallback((store: StoreSchema) => {
-    console.log("Deleting store:", store);
-    // Add your delete logic here
-    alert(`DELETE ${store.id}`);
-  }, []);
-
-  const columns = useMemo(
-    () => getColumns({
-      onEdit: handleEdit,
-      onDelete: handleDelete,
-    }),
-    [handleEdit, handleDelete]
-  );
+  const columns = useMemo(() => getColumns(), []);
 
   return (
     <main className="container mx-auto p-3">

@@ -25,11 +25,6 @@ export function InputWithLabel({
 
   const fieldTitleNoSpaces = fieldTitle.replaceAll(" ", "-");
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    //fieldValue = event.target.value;
-    console.log(`my data:` + event.target.value);
-  };
-
   return (
     <FormField
       control={form.control}

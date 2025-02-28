@@ -7,7 +7,6 @@ import { Switch } from "@/components/ui/switch";
 type Props = {
     fieldTitle: string;
     nameInSchema: string;
-    placeholder?: string;
     labelLeft?: boolean;
     readOnly?: boolean;
 };
@@ -15,7 +14,6 @@ type Props = {
 export function SwitchWithLabel({
     fieldTitle,
     nameInSchema,
-    placeholder,
     labelLeft,
     readOnly,
 }: Props) {

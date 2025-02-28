@@ -3,15 +3,7 @@
 import { ColumnDef } from "@tanstack/react-table";
 import { StoreSchema } from "../schemas/StoreSchema";
 
-interface StoreColumnsProps {
-  onEdit: (store: StoreSchema) => void;
-  onDelete: (store: StoreSchema) => void;
-}
-
-export const getColumns = ({
-  onEdit,
-  onDelete,
-}: StoreColumnsProps): ColumnDef<StoreSchema>[] => [
+export const getColumns = (): ColumnDef<StoreSchema>[] => [
   {
     accessorKey: "id",
     header: "Store Num",
