@@ -39,10 +39,6 @@ export default function StoreFormPage({ store }: Props) {
     // Handle your form submission here
   }
 
-  const childToParent = (childData: string) => {
-    console.log(`childData:${childData}`);
-  };
-
   return (
     <div>
       {message ? (

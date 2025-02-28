@@ -3,21 +3,8 @@
 import { CSSProperties } from "react";
 import { useRouter } from "next/navigation";
 import type { StoreSchema } from "@/app/schemas/StoreSchema";
-import {
-  ColumnDef,
-  flexRender,
-  getCoreRowModel,
-  useReactTable,
-  Row,
-} from "@tanstack/react-table";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+import { ColumnDef, flexRender, getCoreRowModel, useReactTable, Row } from "@tanstack/react-table";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 const DEFAULT_REACT_TABLE_COLUMN_WIDTH = 150;
 
@@ -47,19 +34,19 @@ export default function DataTable({ columns, data }: DataTableProps) {
           {table.getHeaderGroups().map((headerGroup) => (
             <TableRow key={headerGroup.id}>
               {headerGroup.headers.map((header) => {
-                const styles: CSSProperties =
-                  header.getSize() !== DEFAULT_REACT_TABLE_COLUMN_WIDTH
-                    ? { width: `${header.getSize()}px` }
-                    : {};
+                // const styles: CSSProperties =
+                //   header.getSize() !== DEFAULT_REACT_TABLE_COLUMN_WIDTH
+                //     ? { width: `${header.getSize()}px` }
+                //     : {};
 
                 return (
                   <TableHead key={header.id}>
                     {header.isPlaceholder
                       ? null
                       : flexRender(
-                          header.column.columnDef.header,
-                          header.getContext()
-                        )}
+                        header.column.columnDef.header,
+                        header.getContext()
+                      )}
                   </TableHead>
                 );
               })}
