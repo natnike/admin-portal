@@ -1,15 +1,14 @@
 "use client";
 
-import { CSSProperties } from "react";
 import { useRouter } from "next/navigation";
 import type { StoreSchema } from "@/app/schemas/StoreSchema";
 import { ColumnDef, flexRender, getCoreRowModel, useReactTable, Row } from "@tanstack/react-table";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
-const DEFAULT_REACT_TABLE_COLUMN_WIDTH = 150;
+//const DEFAULT_REACT_TABLE_COLUMN_WIDTH = 150;
 
 interface DataTableProps {
-  columns: ColumnDef<StoreSchema, any>[];
+  columns: ColumnDef<StoreSchema, keyof StoreSchema>[];
   data: StoreSchema[];
 }
 
